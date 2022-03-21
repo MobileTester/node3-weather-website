@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png">
+        <!-- relative path -->
+        <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+        <!-- absolute path: which starts from the public folder, since it is exposed -->
+        <link rel="stylesheet" href="/css/styles.css">
+
+        <!-- Loading the js file -->
+        <!--<script src="/js/app.js"></script>--> <!-- when js file is loaded in head, it gets rendered before the form elements are loaded-->
+
+    </head>
+
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <!-- Moving the header and footer to partials-->
+            <!-- Getting the title value from the object passed -->
+            <!-- <h1>{{title}}</h1> -->
+            <!-- <p>Created by {{name}}</p> -->
+            <p>Use this site to get your weather</p>
+
+            <form>
+                <input placeholder="Location">
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+        
+        {{>footer}}
+
+         <!-- Loading the js file --> 
+        <script src="/js/app.js"></script> <!-- When js file is loaded here, it will be loaded only after the html elements are loaded -->
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>About</title>
+         <link rel="icon" href="/img/weather.png">
+        <!-- relative path -->
+        <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+        <!-- absolute path: which starts from the public folder, since it is exposed -->
+        <link rel="stylesheet" href="/css/styles.css">
+       
+    </head>
+
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <!-- Loading the image -->
+            <img src="/img/me.jpg" alt="" class="portrait">
+        </div>
+        
+        {{>footer}}
+    </body>
+
+</html>
