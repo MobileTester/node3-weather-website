@@ -1,4 +1,4 @@
-console.log('client side javascript file is loaded!')
+// console.log('client side javascript file is loaded!')
 // fetch is not a javascript function or node function. fetch returns a promise.
 // fetch is used in client side javascript. (Just an eg usage for fetch is shown below)
 fetch('/weather?address=!').then((response) => {
