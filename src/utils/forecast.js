@@ -20,7 +20,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         // error is the undefined arg here. not mandatory to pass undefined as the 1st argument. If nothings is passed, it will be considered as undefined   
         else {
-            callback(undefined, body.current.weather_descriptions[0] + '. Currently it is ' + body.current.temperature + ' degrees out. But it feels like ' + body.current.feelslike + " degrees.")
+            callback(undefined, "Is Day: " + body.current.is_day + ". " + body.current.weather_descriptions[0] + '. Currently it is ' + body.current.temperature + ' degrees out. But it feels like ' + body.current.feelslike + " degrees.")
         }
     })
 }
