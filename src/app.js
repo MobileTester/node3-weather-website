@@ -13,6 +13,9 @@ console.log(__filename)
 console.log(path.join(__dirname, '../public'))
 
 const app = express()
+// For heroku deployment. If heroku does not provide the port (in case of local execution), use port 3000
+const port = process.env.PORT || 3000
+
 const publicDirectoryPath = path.join(__dirname, '../public')
 // to configure another path for the hbs files other than the default path
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -198,6 +201,6 @@ app.get('*', (req, res) => {
 
 
 // to start the server. second param is an optional argument, which is a call back function which runs when server is up and running
-app.listen(3000, () => {
-    console.log('server is up on port 3000.')
+app.listen(port, () => {
+    console.log('server is up on port ' + port + '.')
 })
